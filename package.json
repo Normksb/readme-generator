@@ -1,0 +1,28 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "A command line readme generator utilising Inquirer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Norman Bernard",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Normksb/readme-generator.git"
+  },
+  "keywords": [
+    "Good",
+    "readme",
+    "generator",
+    "Inquirer"
+  ],
+  "bugs": {
+    "url": "https://github.com/Normksb/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Normksb/readme-generator#readme"
+}
