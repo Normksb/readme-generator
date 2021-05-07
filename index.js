@@ -57,13 +57,44 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, `${data.projectTitle}
+    
+    Description
+    ${data.projectDescription}
+    
+    Installation Instructions
+    ${data.projectInstallationInstructions}
+    
+    Usage Information
+    ${data.projectUsage}
+    
+    Contributors
+    ${data.projectContributors}
+    
+    Test Instructions
+    ${data.projectTest}
+    
+    Project License
+    ${data.projectLicense}
+    
+    Questions, comments, please direct to:
+    ${data.projectGitUserName}
+    GitHub Profile: ${data.projectGitHubProfile}
+    Email Addres: ${data.projectEmailAddress}`, (err) =>
+    err ? console.log(err) : console.log('Success!')
+    );
+}
 
 // TODO: Create a function to initialize app
 function init() {
     const getReadmeDetails = inquirer.prompt(questions);
-    getReadmeDetails.then(response => {
-        console.log(response)
+    getReadmeDetails.then(projectResponses => {
+        console.log(projectResponses);
+//        const answersArray = Object.values(projectResponses);
+//        console.log(answersArray);
+        const fileName = './inquirer-generated-README.md';
+        writeToFile(fileName, projectResponses);
     })
 }
 
